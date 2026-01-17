@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdee9, #b5fffc);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .page {
+      min-height: 100vh;
+      display: none;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .page.active {
+      display: flex;
+    }
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 700px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e63956;
+    }
+    .heart {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <div class="heart">❤️</div>
+  <h1>Hey…</h1>
+  <p>
+    Tere saath baat karna honestly mujhe bohot acha lagta hai.  
+    Jab bhi hum baat karte hain na, dil thoda light feel karta hai  
+    aur chehre par smile aa jaati hai.
+  </p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="heart">✨</div>
+  <h1>Ek Chhoti Si Baat</h1>
+  <p>
+    Shayad tujhe idea bhi nahi hoga,  
+    par teri simple si baatein bhi mere din ko better bana deti hain.  
+    Teri presence hi kaafi hoti hai.
+  </p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="heart">🌸</div>
+  <h1>Feelings Simple Hain</h1>
+  <p>
+    Main koi pressure nahi dena chahta,  
+    bas itna bolna tha ke tere saath baat karke  
+    mujhe genuinely sukoon milta hai.
+  </p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <div class="heart">💫</div>
+  <h1>Respect Sabse Upar</h1>
+  <p>
+    Agar tu kisi ke saath happy hai,  
+    toh main dil se chahta hoon ke tu wahi rahe.  
+    Main teri life mein zabardasti nahi ghusna chahta.
+  </p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <div class="heart">🥀</div>
+  <h1>Goodbye</h1>
+  <p>
+    Shayad mujhe lagta hai ke main tujhe bohot pareshan  
+    ya irritate kar raha hoon.  
+    Isliye thoda peeche hatna hi sahi laga.
+    <br><br>
+    Jab bhi tujhe meri zarurat ho,  
+    bas ek call kar dena — main hamesha rahunga.
+    <br><br>
+    Tu mujhe friend maanta hoga,  
+    par main tujhe sirf friend nahi maanta…  
+    par abhi iska koi fayda nahi jaan kar.
+    <br><br>
+    Hamesha khush rehna 😁  
+    <br><br>
+    <b>Once again… Goodbye ❤️  
+    I’ll always be there for you.</b>
+  </p>
+</div>
+
+<script>
+  let currentPage = 0;
+  const pages = document.querySelectorAll('.page');
+
+  function nextPage() {
+    pages[currentPage].classList.remove('active');
+    currentPage++;
+    pages[currentPage].classList.add('active');
+  }
+</script>
+
+</body>
+</html>
